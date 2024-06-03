@@ -340,11 +340,11 @@ canvas {
     }
 
     canvas {
-        width: 90vw;
+        width: 85vw;
         align-self: center;
     }
     meter {
-        width: 70vw;
+        width: 30vw;
     }
 
     .footswitch {
