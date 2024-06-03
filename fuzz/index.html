@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        />
+        <!-- Google Fonts for styling -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Danfo:ELSH@0..100&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <title>Javascript Distortion Sim</title>
+    </head>
+    <body>
+        <div class="pedalContainer">
+            <h1>WJS DISTORTION</h1>
+            <div id="pedal">
+                <div class="pedalControlContainer">
+                    <!-- Range sliders for controlling distortion parameters -->
+                    <div class="control">
+                        <label for="fuzz"></label>
+                        <input
+                            id="fuzz"
+                            type="range"
+                            min="0"
+                            max="1"
+                            step="0.01"
+                            value="1"
+                            class="vertical-slider"
+                        />
+                        <output id="fuzzValue">1</output>
+                    </div>
+                    <div class="control">
+                        <label for="lowcut"></label>
+                        <input
+                            id="lowcut"
+                            type="range"
+                            min="20"
+                            max="500"
+                            step="1"
+                            value="20"
+                            class="vertical-slider"
+                        />
+                        <output id="lowcutValue">20</output>
+                    </div>
+                    <div class="control">
+                        <label for="low"></label>
+                        <input
+                            id="low"
+                            type="range"
+                            min="-20"
+                            max="20"
+                            step="1"
+                            value="0"
+                            class="vertical-slider"
+                        />
+                        <output id="lowValue">0</output>
+                    </div>
+                    <div class="control">
+                        <label for="mid"></label>
+                        <input
+                            id="mid"
+                            type="range"
+                            min="-20"
+                            max="20"
+                            step="1"
+                            value="0"
+                            class="vertical-slider"
+                        />
+                        <output id="midValue">0</output>
+                    </div>
+                    <div class="control">
+                        <label for="high"></label>
+                        <input
+                            id="high"
+                            type="range"
+                            min="-20"
+                            max="20"
+                            step="1"
+                            value="0"
+                            class="vertical-slider"
+                        />
+                        <output id="highValue">0</output>
+                    </div>
+                    <div class="control">
+                        <label for="hicut"></label>
+                        <input
+                            id="hicut"
+                            type="range"
+                            min="1000"
+                            max="5000"
+                            step="1"
+                            value="3000"
+                            class="vertical-slider"
+                        />
+                        <output id="hicutValue">3000</output>
+                    </div>
+                    <div class="control">
+                        <label for="output"></label>
+                        <input
+                            id="output"
+                            type="range"
+                            min="0"
+                            max="1"
+                            step="0.01"
+                            value="1"
+                            class="vertical-slider"
+                        />
+                        <output id="outputValue">1</output>
+                    </div>
+                </div>
+                <!-- Additional settings and controls -->
+                <div class="control settingsContainer hidden">
+                    <div>
+                        <label for="inputVolume">Input Volume:</label>
+                        <meter
+                            id="inputVolume"
+                            min="0"
+                            max="0.1"
+                            value="0"
+                        ></meter>
+                    </div>
+                    <div class="uploadFile">
+                        <label for="audioFile">Upload an audio file:</label>
+                        <input id="audioFile" type="file" accept="audio/*" />
+                    </div>
+                    <div class="chooseInput">
+                        <label for="audioInput">Select audio input:</label>
+                        <select id="audioInput"></select>
+                    </div>
+                    <canvas id="eqCurve" width="400" height="150"></canvas>
+                </div>
+            </div>
+            <div class="led off" id="led"></div>
+            <div class="footswitch-container">
+                <button id="startStop" class="footswitch">OFF</button>
+                <label for="startStop" class="footswitch-label"></label>
+            </div>
+            <button id="toggleSettings" class="toggle-button">SETTINGS</button>
+        </div>
+        <script src="fuzz.js"></script>
+    </body>
+</html>
