@@ -280,6 +280,7 @@ canvas {
 
         left: 0;
     }
+
     .pedalControlContainer label {
         top: 10px;
     }
@@ -332,7 +333,8 @@ canvas {
         width: 100px;
         height: 30px;
     }
-
+    .settingsContainer {
+    }
     output {
         font-size: 12px;
     }
@@ -342,7 +344,7 @@ canvas {
         align-self: center;
     }
     meter {
-        width: 100vw;
+        width: 90vw;
     }
 
     .footswitch {
