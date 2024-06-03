@@ -271,10 +271,10 @@ canvas {
     align-items: flex-start;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
     /* iPhone SE width */
     .pedalContainer {
-        width: 100%;
+        width: 90vw;
         padding: 15px;
         position: absolute;
 
